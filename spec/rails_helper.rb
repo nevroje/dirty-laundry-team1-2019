@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'coveralls'
+Coveralls.wear_merged!('rails') 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
@@ -22,6 +24,6 @@ end
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
-    with.library :rails 
+    with.library :rails
   end
 end

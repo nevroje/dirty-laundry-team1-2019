@@ -1,4 +1,6 @@
 require 'cucumber/rails'
+require 'coveralls'
+Coveralls.wear_merged!('rails') 
 
 World(FactoryBot::Syntax::Methods)
 
@@ -11,4 +13,3 @@ rescue NameError
 end
 
 Cucumber::Rails::Database.javascript_strategy = :truncation
-
