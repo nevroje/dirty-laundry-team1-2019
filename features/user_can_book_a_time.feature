@@ -5,7 +5,7 @@ In order to be able to do my laundry
 I would like to be able to book a timeslot in the calendar
 
     Scenario:
-        Given I visit the landing page
+        Given I am on the "Landing" page
         When I click on "Feb 27"
         Then I should see "Timeslots"
         When I click on "11:00-15:00"
