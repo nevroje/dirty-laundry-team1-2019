@@ -10,6 +10,12 @@
   <%= @forecast.lng %>
 </p>
 The weather is <%= @current_conditions.summary %> and <%= @current_conditions.temperature %>
+<% @daily_weather.each do |day| %>        
+  <%= day.summary %><br>
+    High: <%= day.apparentTemperatureMax %> | Low: <%= day.apparentTemperatureMin %>
+<% end %>
+<%= Time.at(day.time).strftime('%A') %>
+
 
 <%= link_to 'Edit', edit_forecast_path(@forecast) %> |
 <%= link_to 'Back', forecasts_path %>

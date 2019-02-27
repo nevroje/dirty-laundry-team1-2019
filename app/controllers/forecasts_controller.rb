@@ -1,32 +1,26 @@
 class ForecastsController < ApplicationController
   before_action :set_forecast, only: [:show, :edit, :update, :destroy]
-
+  @daily_weather = @weather.daily.data.first(5)
+  
   def show       
     @weather = @forecast.get_weather       
     @current_weather = @weather.currently  
   end
-  # GET /forecasts
-  # GET /forecasts.json
   def index
     @forecasts = Forecast.all
   end
 
-  # GET /forecasts/1
-  # GET /forecasts/1.json
   def show
   end
 
-  # GET /forecasts/new
   def new
     @forecast = Forecast.new
   end
 
-  # GET /forecasts/1/edit
+
   def edit
   end
 
-  # POST /forecasts
-  # POST /forecasts.json
   def create
     @forecast = Forecast.new(forecast_params)
 
@@ -41,8 +35,7 @@ class ForecastsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /forecasts/1
-  # PATCH/PUT /forecasts/1.json
+
   def update
     respond_to do |format|
       if @forecast.update(forecast_params)
@@ -55,8 +48,7 @@ class ForecastsController < ApplicationController
     end
   end
 
-  # DELETE /forecasts/1
-  # DELETE /forecasts/1.json
+
   def destroy
     @forecast.destroy
     respond_to do |format|
@@ -66,12 +58,10 @@ class ForecastsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_forecast
       @forecast = Forecast.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def forecast_params
       params.require(:forecast).permit(:lat, :lng)
     end
