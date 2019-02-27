@@ -7,7 +7,7 @@ end
 
 ruby '2.4.3'
 
-gem 'rails', '~> 5.2.2'
+gem 'rails', '~> 5.0','>= 5.0.6'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'simple_calendar', '~> 2.0'
+gem 'acts_as_bookable', '~> 0.1.4'
 
 group :development, :test do
   gem 'factory_bot_rails'
