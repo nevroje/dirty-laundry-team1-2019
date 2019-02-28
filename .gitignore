@@ -14,3 +14,4 @@
 yarn-debug.log*
 .yarn-integrity
 /coverage
+config/application.yml
