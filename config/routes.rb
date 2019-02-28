@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'bookings/index'
-    root controller: :bookings, action: :index
+  root controller: :bookings, action: :index
+  resources :bookings, only: [:index, :create]
 end
