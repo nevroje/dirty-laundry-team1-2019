@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/CraftAcademy/acts_as_bookable
-  revision: 9ffbc381909ba6ae1e6e4ffa500c1a4b87c3254b
+  revision: 2f346daefc07e8bd08a55bc567078817fe34462f
   specs:
     acts_as_bookable (0.1.4)
       activerecord (~> 5.1)
