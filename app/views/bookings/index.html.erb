@@ -1,47 +1,14 @@
-<p id="notice">
-  <%= notice %>
-</p>
-
-<h1>Bookings</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Time slot</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bookings.each do |booking| %>
-    <tr>
-      <td>
-        <%= booking.name %>
-      </td>
-      <td>
-        <%= booking.time_slot %>
-      </td>
-      <td>
-        <%= link_to 'Show', booking %>
-      </td>
-      <td>
-        <%= link_to 'Edit', edit_booking_path(booking) %>
-      </td>
-      <td>
-        <%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Booking', new_booking_path %>
+<h1>Bookings#index</h1>
+<p>Find me in app/views/bookings/index.html.erb</p>
 
 <%= month_calendar do |date| %>
-  <a href="/" target="popup" onclick="window.open('/bookings/new','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
-    <%= date.day %>
-  </a>
+  <!--a href="/" target="popup" onclick="window.open('popup','width=600,height=600'); return false;">
+     <%= date %>
+ </a --> 
+ <div id="<%=date%>">
+      <%= date %>
+    </div>
 <% end %>
+
+ 
+  
