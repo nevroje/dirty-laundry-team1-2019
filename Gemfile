@@ -18,6 +18,7 @@ gem 'simple_calendar', '~> 2.0'
 gem 'open-weather-api'
 
 group :development, :test do
+  gem 'webmock'
   gem 'factory_bot_rails'
   gem 'pry-rails'
   gem 'rspec-rails'

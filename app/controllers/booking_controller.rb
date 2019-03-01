@@ -9,6 +9,5 @@ class BookingController < ApplicationController
         @forecasts << forecast
       end
     end
-    binding.pry
   end
 end
