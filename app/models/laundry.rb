@@ -1,5 +1,5 @@
 class Laundry < ApplicationRecord
-    acts_as_bookable  time_type: :fixed
+    acts_as_bookable  time_type: :fixed, capacity_type: :closed
 
     before_validation :add_schedule
 

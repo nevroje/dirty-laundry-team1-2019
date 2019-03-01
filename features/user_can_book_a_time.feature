@@ -13,3 +13,4 @@ I would like to be able to book a timeslot in the calendar
         Given I am on the "Landing" page
         When I click on "08:00" on "tomorrow"
         Then I should see "Booking was successfully created."
+        Then show me the page

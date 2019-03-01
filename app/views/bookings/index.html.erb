@@ -6,7 +6,13 @@
     <%= date %>
     <% @laundries.each do |room| %>
         <% room.schedule.occurrences_between(date.midnight, date.midnight + 24.hours).each do |slot| %>
-            <div><%= link_to slot.to_formatted_s(:time), bookings_path(slot: slot), method: "post", data: {confirm: "Would you like to book this timeslot?"} %></div>
+            <div>
+                <%  if room.check_availability(time: slot.time, amount: 1) && user_signed_in? %>
+                    <%= link_to slot.to_formatted_s(:time), bookings_path(slot: slot), method: "post", data: {confirm: "Would you like to book this timeslot?"} %>
+                <% else %>
+                    <p> <%= slot.to_formatted_s(:time) %></p>
+                <% end %>
+            </div>
         <% end %>
     <% end %>
 </div>

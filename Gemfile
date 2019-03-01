@@ -29,6 +29,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'coveralls', require: false
+  gem 'launchy'
 end
 
 group :development do
