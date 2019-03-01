@@ -20,3 +20,16 @@ Given("we have {int} laundry") do |int|
     create(:laundry)
   end
 end
+
+Given("I am logged in as {string}") do |email|
+  user = User.find_by(email: email)
+  login_as(user, scope: :user)
+end
+
+Given /^I log out$/ do
+  logout
+end
+
+Given("we have (1 )user with email {string}") do |email|
+  FactoryBot.create(:user, email: email)
+end
