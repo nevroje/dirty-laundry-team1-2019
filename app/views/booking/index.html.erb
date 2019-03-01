@@ -3,3 +3,8 @@
 <%= month_calendar do |date| %>
   <%= date.day %>
 <% end %>
+
+<% @forecasts.each do |forecast| %>
+  <%= forecast['wind']['speed']%>
+  <%= forecast['main']['temp']%>
+<% end %>
