@@ -2,14 +2,11 @@
 <p>Find me in app/views/bookings/index.html.erb</p>
 
 <%= month_calendar do |date| %>
-<!--a href="/" target="popup" onclick="window.open('popup','width=600,height=600'); return false;">
-     <%= date %>
- </a -->
 <div id="<%=date%>">
     <%= date %>
     <% @laundries.each do |room| %>
         <% room.schedule.occurrences_between(date.midnight, date.midnight + 24.hours).each do |slot| %>
-            <div><%= link_to slot.to_formatted_s(:time), bookings_path, method: "post"  %></div>
+            <div><%= link_to slot.to_formatted_s(:time), bookings_path, method: "post", data: {confirm: "Would you like to book this timeslot?"} %></div>
         <% end %>
     <% end %>
 </div>

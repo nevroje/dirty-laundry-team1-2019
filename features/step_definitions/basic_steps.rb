@@ -15,3 +15,8 @@ When("I click on {string} on {string}") do |time, date|
   end
 end
 
+Given("we have {int} laundry") do |int|
+  int.times do |room|
+    create(:laundry)
+  end
+end
