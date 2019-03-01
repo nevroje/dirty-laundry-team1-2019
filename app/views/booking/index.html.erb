@@ -5,6 +5,7 @@
 <% end %>
 
 <% @forecasts.each do |forecast| %>
-  <%= forecast['wind']['speed']%>
-  <%= forecast['main']['temp']%>
+  <%= forecast['weather'][0]['description'] %>
+  <%= convert_to_celcius(forecast['main']['temp']).round %>
+  <%= convert_to_weekday(forecast['dt_txt']) %>
 <% end %>

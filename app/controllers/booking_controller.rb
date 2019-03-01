@@ -1,8 +1,7 @@
 class BookingController < ApplicationController
   def index
     open_weather_api = Rails.configuration.open_weather_api
-    binding.pry
-    weather = open_weather_api.forecast :daily, city: "Stockholm", country_code: "SE", unit: :metric
+    weather = open_weather_api.forecast :hourly, city: "Stockholm", country_code: "se", default_unit: "metric"
     @forecasts = []
     
     weather['list'].each do |forecast|
@@ -10,6 +9,6 @@ class BookingController < ApplicationController
         @forecasts << forecast
       end
     end
-    # binding.pry
+    binding.pry
   end
 end
