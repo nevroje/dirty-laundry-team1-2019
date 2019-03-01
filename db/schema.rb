@@ -30,13 +30,6 @@ ActiveRecord::Schema.define(version: 2019_03_01_131111) do
     t.index ["booker_type", "booker_id"], name: "index_acts_as_bookable_bookings_booker"
   end
 
-  create_table "bookings", force: :cascade do |t|
-    t.string "name"
-    t.datetime "time_slot"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "laundries", force: :cascade do |t|
     t.text "schedule"
     t.datetime "created_at", null: false

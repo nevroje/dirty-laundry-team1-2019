@@ -9,8 +9,13 @@ I would like to be able to book a timeslot in the calendar
         And we have 1 user with email 'thomas@craft.se'
         And I am logged in as 'thomas@craft.se'
 
-    Scenario:
+    Scenario: User can successfully book a laundry slot [Happy path]
         Given I am on the "Landing" page
         When I click on "08:00" on "tomorrow"
         Then I should see "Booking was successfully created."
-        Then show me the page
+
+    # Scenario: User can't book a laundry slot [Sad path]
+    #     Given I am on the "Landing" page
+    #     When I click on "08:00" on "tomorrow"
+    #     And I click on "08:00" on "tomorrow"
+    #     Then I should not see the link
