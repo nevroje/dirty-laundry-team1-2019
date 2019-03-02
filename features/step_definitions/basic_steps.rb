@@ -29,7 +29,7 @@ Given /^I log out$/ do
 end
 
 Given("we have (1 )user with email {string}") do |email|
-  FactoryBot.create(:user, email: email)
+  create(:user, email: email)
 end
 
 Then("(s/S)how me the page") do
