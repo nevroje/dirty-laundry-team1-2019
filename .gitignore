@@ -8,6 +8,11 @@
 /yarn-error.log
 
 .byebug_history
-/coverage
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/coverage/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
+/coverage
