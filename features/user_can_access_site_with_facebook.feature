@@ -1,5 +1,8 @@
 Feature: User can access the site with facebook
-
+  
+  As a user of the system
+  In order to simplify the sign up/sign in process
+  I would like to be able to authenticate myself using Facebook
 
   Background:
     Given we have 1 laundry
