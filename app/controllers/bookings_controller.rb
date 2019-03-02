@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!, only: :create
   def index
-    @laundries = Laundry.all
+    @laundry = Laundry.first
   end
 
   def create
