@@ -1,10 +1,3 @@
-Given("these users exist in our database:") do |table|
-  table.hashes.each do |hash|
-    FactoryBot.create(:user, hash)
-  end
-end
-
-
 Given("I am on the {string} page") do |string|
   visit root_path
 end
@@ -24,8 +17,8 @@ Given /^I log out$/ do
   logout
 end
 
-Given("we have (1 )user with email {string}") do |email|
-  create(:user, email: email)
+Given("we have (1 )user with email {string} and role {string}") do |email, role|
+  FactoryBot.create(:user, email: email, role: role)
 end
 
 Given("I click {string}") do |element|
