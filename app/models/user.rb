@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  after_initialize :set_default_role, if: :new_record?
+
+  enum role: [:visitor, :subscriber]
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, 
          :omniauthable, omniauth_providers: [:facebook]
@@ -18,4 +22,19 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0, 20]
     end
   end
+
+  def visitor?
+    self.role == 'visitor'
+  end
+
+  def subscriber?
+    self.role == 'subscriber'
+  end
+
+  private
+
+  def set_default_role
+    self.role ||= :visitor
+  end
 end
+

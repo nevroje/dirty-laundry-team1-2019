@@ -1,3 +1,10 @@
+Given("these users exist in our database:") do |table|
+  table.hashes.each do |hash|
+    FactoryBot.create(:user, hash)
+  end
+end
+
+
 Given("I am on the {string} page") do |string|
   visit root_path
 end
