@@ -15,8 +15,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'simple_calendar', '~> 2.0'
+gem 'acts_as_bookable', git: 'https://github.com/CraftAcademy/acts_as_bookable'
 gem 'webpacker', '~> 3.5'
 gem 'tailwindcss', '~> 0.2.0'
+gem 'devise'
 
 
 group :development, :test do
@@ -27,6 +29,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'coveralls', require: false
+  gem 'launchy'
 end
 
 group :development do
