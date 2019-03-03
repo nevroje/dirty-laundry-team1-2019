@@ -60,6 +60,7 @@
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+<<<<<<< HEAD
 body {
   background-color:#f4f4f4;
 }
@@ -68,3 +69,5 @@ body {
   margin-top: 4%;
   margin-left: 10%;
 }
+=======
+>>>>>>> 2ded475a9f87974963f212c2f3f62dbb1261ab12
