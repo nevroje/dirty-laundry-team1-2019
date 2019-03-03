@@ -6,7 +6,7 @@ I would like to be able to book a timeslot in the calendar
 
     Background:
         Given we have 1 laundry
-        And we have 1 user with email 'thomas@craft.se'
+        And we have 1 user with email "thomas@craft.se" and role "visitor" 
         And I am logged in as 'thomas@craft.se'
 
     Scenario: User can book a laundry slot
