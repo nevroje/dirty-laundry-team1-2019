@@ -9,11 +9,9 @@ class BookingsController < ApplicationController
       start_date_time = DateTime.parse(params[:slot])
       if current_user.book! @laundry, time: start_date_time, amount: 1
         redirect_to root_path, notice: "Booking was successfully created."
-      else
-        redirect_to root_path, error: "This time-slot has been booked!"
       end
     else
-      redirect_to root_path, error: "You reached your booking limit!"
+      redirect_to root_path, notice: "You reached your booking limit!"
     end 
   end
 end
