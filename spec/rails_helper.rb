@@ -1,5 +1,6 @@
 require 'spec_helper'
 require 'coveralls'
+require "pundit/rspec"
 Coveralls.wear_merged!('rails') 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)

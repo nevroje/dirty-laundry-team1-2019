@@ -60,7 +60,7 @@
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
-<<<<<<< HEAD
+
 body {
   background-color:#f4f4f4;
 }
@@ -69,5 +69,78 @@ body {
   margin-top: 4%;
   margin-left: 10%;
 }
-=======
->>>>>>> 2ded475a9f87974963f212c2f3f62dbb1261ab12
+
+.navbar {
+    @apply flex;
+    @apply flex-wrap;
+    @apply items-center; 
+    @apply justify-between; 
+    @apply bg-grey; 
+    @apply p-5; 
+    @apply text-black; 
+    @apply font-mono;
+}
+
+.footer {
+    @apply w-full;
+    @apply fixed;
+    @apply pin-b;
+    @apply text-center; 
+    @apply bg-grey; 
+    @apply p-5; 
+    @apply text-black; 
+    @apply font-mono;
+    @apply italic;
+}
+
+.title {
+    @apply text-center;
+    @apply text-black;
+    @apply font-mono;
+    @apply text-4xl;
+    @apply pt-20;
+    @apply pb-6;   
+}
+
+.subtitle {
+    @apply text-center;
+    @apply text-black;
+    @apply font-mono;
+    @apply text-2xl;
+    @apply italic;
+    @apply p-3;
+    @apply mb-10;
+}
+
+h2 {
+    @apply text-center;
+    @apply text-black;
+    @apply font-mono;
+    @apply text-2xl;
+    @apply pt-20;
+    @apply pb-6;   
+}
+
+.new_user {
+    @apply text-center;
+    @apply font-mono; 
+}
+
+a {
+    @apply flex;
+    @apply flex-wrap;
+    @apply items-center;
+    @apply text-center;
+    @apply font-mono;
+    @apply italic;
+}
+
+.actions {
+    @apply italic;
+    @apply font-mono;
+}
+
+.p {
+    @apply font-mono;
+    @apply text-center;
+}

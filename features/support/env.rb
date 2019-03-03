@@ -20,6 +20,7 @@ After { Warden.test_reset! }
 
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+<<<<<<< HEAD
 Before '@api_call' do 
   WebMock.disable_net_connect!(allow_localhost: true)
     stub_request(:get, "http://api.openweathermap.org/data/2.5/forecast/?APPID=9f17e0746e709d22e5f04a5160c8abc2&lang=en&q=Stockholm,se").
@@ -31,4 +32,9 @@ Before '@api_call' do
       'User-Agent'=>'rest-client/2.0.2 (darwin18.2.0 x86_64) ruby/2.4.3p205'
       }).
     to_return(status: 200, body: Rails.root.join('features', 'support', 'fixtures', 'weather_api_stub.txt').read, headers: {})
+=======
+Before do
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new(OmniAuthFixtures.facebook_mock)
+>>>>>>> fe328166184ea26cd1a61ee95d54674ad7eb6f93
 end

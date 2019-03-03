@@ -20,6 +20,8 @@ gem 'acts_as_bookable', git: 'https://github.com/CraftAcademy/acts_as_bookable'
 gem 'webpacker', '~> 3.5'
 gem 'tailwindcss', '~> 0.2.0'
 gem 'devise'
+gem 'omniauth-facebook'
+gem 'pundit'
 
 
 group :development, :test do
